@@ -36,9 +36,11 @@ const adicionarCard = (nome, nota) => {
 }
 
 const handleClick = () => {
-    const nome = prompt('Digite o nome do Aluno')
-    const nota = prompt('Digite a nota desse Aluno')
-    adicionarCard(nome, nota)
+    const aluno ={
+        nome: prompt('Digite seu nome:'),
+        nota: prompt('Digite sua nota').replace(',' , '.')
+    }
 
+    adicionarCard(aluno)
 }
 adicionar.addEventListener('click', handleClick)
